@@ -1,0 +1,19 @@
+<phpunit colors="true">
+  <testsuites>
+    <testsuite name="UnitTest">
+      <directory>test</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <blacklist>
+       <directory>./vendor</directory> 
+    </blacklist>
+  </filter>
+  <logging>
+    <log type="junit" target="results/phpunit/phpunit.xml" logIncompleteSkipped="false"/>
+    <log type="coverage-clover" target="results/clover.xml"/>
+    <log type="coverage-html" target="./results" charset="UTF-8"
+      yui="true" highlight="false"
+      lowUpperBound="35" highLowerBound="70"/>
+  </logging>
+</phpunit>
