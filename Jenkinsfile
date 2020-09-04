@@ -2,7 +2,7 @@
 
 String[] srcPaths = ["src/"]
 
-node('docker') {
+node {
     ansiColor('xterm') {
         def analyse
         stage('Checkout') {
